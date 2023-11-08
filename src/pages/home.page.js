@@ -1,11 +1,5 @@
-import Tabs from '../components/tabs/tabs.component'
-import Posts from '../components/posts/posts.component'
-
 const Home = () => (
-    <div>
-        <Tabs />
-        <Posts />
-    </div>
+    <h1>Hola mundo</h1>
 )
 
 export default Home

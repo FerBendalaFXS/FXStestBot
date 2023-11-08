@@ -1,3 +1,3 @@
-const PageNotFound = () => <p>404</p>
+const PageNotFound = () => <h1>404</h1>
 
 export default PageNotFound
