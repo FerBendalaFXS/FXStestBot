@@ -1,25 +1,15 @@
-import { Routes, Route } from 'react-router-dom'
-import { routes } from './routes'
+import { MainButton, useShowPopup } from '@vkruglikov/react-telegram-web-app'
 
-import './assets/scss/index.scss'
 
 const App = () => {
-    // Render routes from ./routes
-    const renderRoutes = ( { children, path, element } ) => (
-        <Route
-            key={path}
-            path={path}
-            element={element}
-        >
-            {children && children.map( childRoute => renderRoutes( childRoute ) )}
-        </Route>
-    )
+    const showPopup = useShowPopup()
 
-    return (
-        <Routes>
-            {routes.map( route => renderRoutes( route ) )}
-        </Routes>
-    )
+    const handleClick = () =>
+        showPopup({
+            message: 'Hello, I am popup',
+        })
+
+    return <MainButton text="SHOW POPUP" onClick={handleClick} />
 }
 
 export default App

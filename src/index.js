@@ -3,15 +3,14 @@ import 'regenerator-runtime/runtime.js'
 
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
 
+import eruda from 'eruda'
 import App from './app'
 
 const root = createRoot(document.getElementById('root'))
+eruda.init()
 root.render(
     <StrictMode>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
+        <App />
     </StrictMode>
 )
