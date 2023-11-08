@@ -61,6 +61,7 @@
         "eruda": "^3.0.1",
         "html-react-parser": "^4.2.2",
         "http-server": "^14.1.1",
+        "input": "^1.0.1",
         "jest-environment-jsdom-sixteen": "^2.0.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
@@ -68,7 +69,8 @@
         "react-responsive": "^9.0.2",
         "redux": "^4.2.0",
         "redux-persist": "^6.0.0",
-        "regenerator-runtime": "^0.13.11"
+        "regenerator-runtime": "^0.13.11",
+        "telegram": "^2.19.10"
     },
     "jest": {
         "testEnvironment": "node",
