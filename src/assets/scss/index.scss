@@ -1,0 +1,46 @@
+@use "variables" as *;
+@use "mixins" as m;
+@use "functions" as f;
+
+@import "fonts";
+@import "reset";
+
+html {
+    scroll-behavior: smooth;
+
+    body {
+        margin: 0;
+
+        color: $color-black;
+        background-color: $color-gray-200;
+
+        font-size: f.rem(16);
+        font-family: $font-family;
+        line-height: 1.4;
+
+        // Basics
+        * {
+            box-sizing: border-box;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-tap-highlight-color: transparent;
+
+            // All focus
+            &:focus {
+                outline: none;
+            }
+        }
+
+        // Images
+        img {
+            max-width: 100%;
+        }
+
+        // Buttons
+        button {
+            font-family: $font-family;
+            font-weight: bold;
+        }
+    }
+}

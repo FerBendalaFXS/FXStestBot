@@ -1,0 +1,21 @@
+@use "mixins" as m;
+
+// Font weights
+$font-weights: (
+    100: "Thin",
+    300: "Light",
+    400: "Regular",
+    500: "Medium",
+    700: "Bold",
+    900: "Black",
+);
+
+// Roboto
+@each $weight,
+$name in $font-weights {
+    @include m.font-face("Roboto", "../fonts/Roboto/Roboto-#{$name}", $weight, normal, woff2 woff);
+    @include m.font-face("Roboto", "../fonts/Roboto/Roboto-#{$name}Italic", $weight, italic, woff2 woff);
+}
+
+// Material Symbols
+@include m.font-face("MaterialSymbolsOutlined", "../fonts/MaterialSymbolsOutlined/MaterialSymbolsOutlined", normal, normal, woff2);

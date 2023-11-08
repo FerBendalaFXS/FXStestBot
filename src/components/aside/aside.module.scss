@@ -1,0 +1,19 @@
+@use "variables" as *;
+@use "mixins" as m;
+@use "functions" as f;
+
+.aside {
+    padding: f.em(46);
+
+    background-color: $color-gray-600;
+
+    &__logo {
+        width: f.em(163);
+        margin-bottom: f.em(101);
+    }
+
+    // Responsive
+    @include m.media(laptop) {
+        display: none;
+    }
+}

@@ -1,0 +1,16 @@
+@use "variables" as *;
+@use "mixins" as m;
+@use "functions" as f;
+
+// Footer
+.post-footer {
+    @include m.flex($ai: center, $gap: f.em(15));
+
+    padding: f.em(2) f.em(28) f.em(24);
+
+    z-index: 9;
+
+    > div {
+        margin-left: f.em(16);
+    }
+}

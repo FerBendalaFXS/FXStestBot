@@ -1,59 +1,50 @@
-<p align="center">
-  <br>
-  <img width="240" src="./assets/tapps.png" alt="logo of telegram web apps">
-  <br>
-  <br>
-</p>
+# FXStreet Frontend test
 
-# Telegram Mini Apps Basic Example
-This is a basic and straightforward Telegram Mini App(TMA) implemented using plain JavaScript, HTML, and CSS. This project aims to provide a minimalistic example of how to create a simple TWA and launch it within Telegram without relying on complex build tools or bleeding-edge libraries.
+This manual provides instructions for running and building an application in development and production mode.
 
-- App is available via direct link: https://t.me/simple_telegram_mini_app_bot/app
-- Or you can launch app with a bot menu button: https://t.me/simple_telegram_mini_app_bot
-- Deployment URL: [https://twa-dev.github.io/simple-telegram-web-app/](https://telegram-mini-apps-dev.github.io/vanilla-js-boilerplate/)
+## Install dependecies
+Before getting started, ensure that all the necessary dependencies are installed by running the following command:
+```bash
+npm install
+```
 
-## Features
-- Minimalistic user interface.
-- No external libraries or frameworks used.
-- Easy to understand and modify.
+## Development
+To run the application in development mode, follow these steps:
+1. Start the development server with the following command:
+```bash
+npm start
+```
 
-## Getting Started
+2. If the browser doesn't open automatically, navigate to http://localhost:3000/ to view the application.
 
-### Prerequisites
 
-To run this example, you'll need a modern web browser with JavaScript enabled.
+## Production
+To run the application in production mode, follow these steps:
+1. Build the production server by running the following command:
+```bash
+npm run build
+```
 
-### Installation
+2. Start the server with the following command:
+```bash
+npm run serve
+```
 
-1. Clone this repository to your local machine:
+3. If the browser doesn't open automatically, navigate to http://localhost:8000/ to view the application.
 
-   ```bash
-   git clone https://github.com/Telegram-Mini-Apps-Dev/vanilla-js-boilerplate
 
-2. Navigate to the project directory:
+## Testing
+To execute the application's tests, use the following commands:
+1. Run all tests with coverage:
+```bash
+npm run test
+```
 
-	```bash
-	cd vanilla-js-boilerplate
+2. Run a specific test file:
+```bash
+npm run test tests/{folder}/{file}.test.js
+```
 
-Open index.html in your preferred code editor or IDE.
-
-### Usage
-1. Open index.html in your preferred code editor or IDE.
-2. Make your changes
-3. Create your own GitHub repository, commit and push your updates.
-4. Go to your repository GitHub page and open Settings. Check the Pages tab and Build and deployment section. If GitHub Actions option was selected, assets should be deployed to Pages and there will be an URL like `https://<username>.github.io/simple-telegram-mini-app/`. You can copy this URL and use it with [BotFather](https://tg.me/BotFather) bot to create your very own TWA.
-
-### Customization
-Feel free to customize this web app to suit your needs. You can modify the HTML, CSS, and JavaScript files as required.
-
-## Contributing
-If you'd like to contribute to this project, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and commit them with descriptive messages.
-4. Push your branch to your fork.
-5. Create a pull request to the main repository's main branch.
-
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## Netlify
+If you want to see the deployed version on Netlify, you can visit the following URL:
+https://64fcc820fa00dc1e57fbbed4--gorgeous-profiterole-75d87f.netlify.app/

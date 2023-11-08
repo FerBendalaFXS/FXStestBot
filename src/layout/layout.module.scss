@@ -1,0 +1,32 @@
+@use "variables" as *;
+@use "mixins" as m;
+@use "functions" as f;
+
+.layout {
+    @include m.grid($gc: f.em(255) minmax(0, 1fr));
+
+    height: 100vh;
+
+    &__main {
+        &__content {
+            @include m.grid($gc: minmax(f.em(500), 1fr) minmax(0, f.em(412)));
+
+            height: calc(100vh - #{f.em(65)});
+        }
+    }
+
+    // Responsive
+    @include m.media(laptop) {
+        @include m.grid($gc: minmax(0, 1fr));
+        height: auto;
+
+        &__main {
+            height: auto;
+            &__content {
+                @include m.grid($gc: minmax(0, 1fr), $gap: f.em(24));
+
+                height: auto;
+            }
+        }
+    }
+}
